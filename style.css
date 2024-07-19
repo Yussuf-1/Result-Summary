@@ -1,0 +1,290 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.container .result {
+    background-color:#4925cf;
+    background-image: linear-gradient(to top ,#322deb 25%,#4233f0 50%,#573df8 75%,#6743ff 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container .result .result-head {
+    color: hsl(241, 100%, 89%);
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.container .result .result-score {
+    background-color: #3d1abf;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+    font-size: 60px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: -1px -16px 27px 1px hsl(244, 85%, 56%, 1) inset;
+    position: relative;
+}
+
+
+.container .result .result-appreciation {
+    color: hsl(221, 100%, 96%);
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.container .result .result-p {
+    width:73%;
+    color: hsl(241, 100%, 89%);
+    font-size: 18px;
+}
+
+.container .summary {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .summary .summary-head {
+    align-self: flex-start;
+    margin-top: 0;
+    padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 0;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.container .summary .sum-degree-container {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(85%));
+    display: grid;
+}
+
+.container .summary .sum-degree-container div {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.container .summary .sum-degree-container .item-1 {
+    background-color: hsla(6, 100%, 91%, 1);
+}
+
+.container .summary .sum-degree-container .item-2 {
+    background-color: hsla(42, 100%, 90%, 1);
+}
+
+.container .summary .sum-degree-container .item-3 {
+    background-color: hsla(145, 100%, 90%, 1);
+}
+
+.container .summary .sum-degree-container .item-4 {
+    background-color: hsla(241, 100%, 89%, 1);
+}
+
+.container .summary .sum-degree-container .title .reac {
+    color: #ff5655;
+}
+
+.container .summary .sum-degree-container .title .memo {
+    color: #ffb21e;
+}
+
+.container .summary .sum-degree-container .title .verb {
+    color: #08be92;
+}
+
+.container .summary .sum-degree-container .title .visu {
+    color: #1125d6;
+}
+
+.container .summary .sum-degree-container .title img {
+    padding-right: 5px;
+}
+
+.container .summary .sum-degree-container .title > span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.container .summary .sum-degree-container .degree .num {
+    padding-right: 10px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.container .summary .sum-degree-container .degree .hundred {
+    color: #8f8891;
+}
+
+.container .summary .btn {
+    width: 85%;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: hsl(224, 30%, 27%);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer; 
+    outline: none;
+    transition: 0.3s;
+}
+
+.container .summary .btn:hover {
+    background-color: #4233f0;
+}
+
+/* 
+==================================
+For Mobil 
+==================================
+*/
+
+ @media (min-width: 375px) {
+
+    .container{
+        width: 100%;
+    }
+
+    .container .result {
+        height: 300px;
+        padding-bottom:20px;
+        padding-top: 25px;
+        margin-bottom: 20px;
+        border-radius: 25px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .container .result .result-head {
+        padding-top: 25px;
+    }
+
+    .container .result .result-score {
+        width: 85px;
+        height: 90px;
+        
+        position: relative;
+    }
+
+    .container .result .result-score::before {
+        content: 'of 100';
+        color: hsl(246, 100%, 74%,1);
+        font-size: 15px;
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        transform: translate(-50%,-50%);
+    }
+
+    .container .summary .summary-head {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .container .summary .sum-degree-container {
+        margin-bottom: 50px;
+        gap: 20px 0;
+    }
+
+    .container .summary .sum-degree-container .title , 
+.container .summary .sum-degree-container .degree {
+    padding: 15px;
+    }
+
+    .container .summary .btn {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+} 
+
+/* 
+==================================
+For Desktop 
+==================================
+*/
+
+@media (min-width: 1024px) {
+
+    .container {
+        width: 700px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
+        box-shadow: 0px 5px 40px -20px   hsl(224, 30%, 27%);
+        border: none;
+        border-radius: 20px;
+    }
+
+    .container .result {
+        border-radius: 20px;
+        height: 400px;
+        margin-bottom: 0;
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+
+    .container .result .result-head {
+        padding-top: 10px;
+    }
+
+    .container .result .result-score {
+        width: 110px;
+        height: 110px;
+    }
+
+    .container .result .result-score::before {
+        content: 'of 100';
+        color: hsl(246, 100%, 74%,1);
+        font-size: 15px;
+        position: absolute;
+        left: 50%;
+        bottom: 5px;
+        transform: translate(-50%,-50%);
+    }
+
+    .container .summary .summary-head {
+        padding-left: 25px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+
+    .container .summary .sum-degree-container {
+        gap: 13px 0;
+        margin-bottom: 20px;
+    }
+
+    .container .summary .sum-degree-container .title , 
+.container .summary .sum-degree-container .degree {
+    padding: 7px;
+    }
+
+    .container .summary .btn {
+        padding: 15px;
+    }
+
+}
